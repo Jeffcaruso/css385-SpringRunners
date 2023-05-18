@@ -4,9 +4,8 @@
 
 # [Website](https://jeffcaruso.github.io/css385-BETA/)
 
-# [WebGL Build](https://jeffcaruso.github.io/css385-BETA/JeffMasterBuild/)
+# [WebGL Build](https://jeffcaruso.github.io/css385-SpringRunners/JeffMasterBuild/)
 
-# [Partial WebGL Build w/Art](https://jeffcaruso.github.io/css385-BETA/ArtBuild/)
 
 ### Level 1 (Tutorial)
 - Introduce Piston
