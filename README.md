@@ -1,5 +1,7 @@
 # Beta build of final project game
 
+# DONT USE THE LINKS BELOW YET, NEED TO BE UPDATED!
+
 # [Website](https://jeffcaruso.github.io/css385-BETA/)
 
 # [WebGL Build](https://jeffcaruso.github.io/css385-BETA/JeffMasterBuild/)
