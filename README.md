@@ -1,6 +1,6 @@
 # Beta build of final project game
 
-# [Website](https://jeffcaruso.github.io/css385-BETA/)
+# [Website](https://jeffcaruso.github.io/css385-SpringRunners/)
 
 # [WebGL Build](https://jeffcaruso.github.io/css385-SpringRunners/JeffMasterBuild/)
 
@@ -13,17 +13,13 @@
 - Introduce grapple (swing)
 
 ### Level 2 (Jeff level - multi level selection)
-- Multiple paths mechanic
-- Hidden lethal path
-- Easy path
-- relatively Hard, but doable path
+- more info here...
 
 ### Level 3 (Lawrence level)
 - more info here...
 
 ### Level 4 (Malaki Level)
 - more info here...
-
 
 ### Level 5 (Joseph Level)
 - more info here...
