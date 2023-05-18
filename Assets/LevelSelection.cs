@@ -33,13 +33,18 @@ public class LevelSelection : MonoBehaviour
         }
         else if (Input.GetKeyDown("4"))
         {
-            //level 4 (Malaki)
+            //level 4 (Malachi)
             SceneManager.LoadScene("Malachi-Scene");
         }
         else if (Input.GetKeyDown("5"))
         {
             //level 5 (Joseph)
             SceneManager.LoadScene("Joseph-Scene");
+        }
+        else if (Input.GetKeyDown("0"))
+        {
+            //level 5 (malachi)
+            SceneManager.LoadScene("malachi tutorial");
         }
         else
         {
