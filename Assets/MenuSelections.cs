@@ -6,14 +6,21 @@ using UnityEngine.SceneManagement;
 public class MenuSelections : MonoBehaviour
 {
     public static bool isPaused = false;
+    public static bool win = false;
     public static bool dead = false;
 
     public GameObject pauseMenuUI;
     public GameObject deathMenuUI;
+    public GameObject victoryScreen;
+    public GameObject quitScreen;
+
 
     void Update()
     {
-        if (!dead){
+        if (win){
+            GameObject.Find("Hero square").GetComponent<HeroBehavior>().enabled = false;
+            victoryScreen.SetActive(true);
+        } else if (!dead){
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (isPaused)
@@ -50,18 +57,21 @@ public class MenuSelections : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         dead = false;
+        win = false;
         SceneManager.LoadScene("Level Select Scene");
     }
 
     public void Quit(){
-        //Add quit screen?
+        quitScreen.SetActive(true);
         Debug.Log("Quitting!");
         Application.Quit();
     }
 
     public void TryAgain(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        win = false;
         dead = false;
         deathMenuUI.SetActive(false);
+        victoryScreen.SetActive(false);
     }
 }

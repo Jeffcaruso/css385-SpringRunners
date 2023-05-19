@@ -41,6 +41,8 @@ public class HeroBehavior : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction;
     private float jumpTimer;
+    private GameObject finish;
+
 
 
     [Header("Grapple Vars")]
@@ -56,6 +58,7 @@ public class HeroBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerRigidbody = player.GetComponent<Rigidbody>();
+        finish = GameObject.Find("Safety FinishLine");
     }
 
     // Update is called once per frame
@@ -128,7 +131,10 @@ public class HeroBehavior : MonoBehaviour
         ///very important line directly below!!!
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));   
         
-
+        if (transform.position.x > finish.transform.position.x + 50){
+            rb.velocity = new Vector2(0,0);
+            MenuSelections.win = true;
+        }
 
 
 
