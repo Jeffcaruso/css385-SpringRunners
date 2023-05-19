@@ -103,9 +103,9 @@ public class Grappler : MonoBehaviour
         if (col.CompareTag("Grapple")){
             //////////////////////////////////////////////////////////////////
             Color tmp = grappleBlock.GetComponent<SpriteRenderer>().color;
-            tmp.r = 150;
-            tmp.g = 0;
-            tmp.b = 0;
+            tmp.r = 105;
+            tmp.g = 105;
+            tmp.b = 105;
             grappleBlock.GetComponent<SpriteRenderer>().color = tmp;
             //////////////////////////////////////////////////////////////////
             grappleBlock = null;
