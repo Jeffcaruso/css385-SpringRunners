@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a2d37702ef2b74a8ccf5f761fe9fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2
+  delay: 1
 --- !u!1001 &705076014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2397,6 +2397,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1940874814}
   deathMenuUI: {fileID: 1338734735}
+  victoryScreen: {fileID: 0}
+  quitScreen: {fileID: 0}
 --- !u!114 &1753877758
 MonoBehaviour:
   m_ObjectHideFlags: 0

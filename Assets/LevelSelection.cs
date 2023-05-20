@@ -46,6 +46,9 @@ public class LevelSelection : MonoBehaviour
             //level 5 (malachi)
             SceneManager.LoadScene("malachi tutorial");
         }
+        else if (Input.GetKeyDown("6")){
+            SceneManager.LoadScene("Boss Level");
+        }
         else
         {
             //do nothing

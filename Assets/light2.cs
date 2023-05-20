@@ -23,7 +23,7 @@ public class light2 : MonoBehaviour
         sr.sprite = Resources.Load<Sprite>("Circle");
         //set position and radius
         circle.transform.position = this.transform.position;
-        circle.transform.localScale = new Vector3(19 * cr.radius, 19 * cr.radius, 1);
+        circle.transform.localScale = new Vector3(20 * cr.radius, 20 * cr.radius, 1);
         circle.transform.SetParent(this.transform);
         
         Color tmp = GetComponent<SpriteRenderer>().color;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public float delay = 2.0f; //Adds a specified amount of time before the shake occurs
+    public float delay = 1.0f; //Adds a specified amount of time before the shake occurs
 
     public void CallShake()
     {
