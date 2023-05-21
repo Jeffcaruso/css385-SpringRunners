@@ -159,6 +159,7 @@ MonoBehaviour:
   grappleDist: 3
   isGrappling: 0
   player: {fileID: 6933810634054041799}
+  jumpSoundEffect: {fileID: 0}
 --- !u!114 &6933810634054041807
 MonoBehaviour:
   m_ObjectHideFlags: 0

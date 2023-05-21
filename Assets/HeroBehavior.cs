@@ -51,7 +51,7 @@ public class HeroBehavior : MonoBehaviour
     public GameObject player;
     Rigidbody playerRigidbody;
 
-
+    [SerializeField] private AudioSource jumpSoundEffect;
 
     // Start is called before frame 0
     void Start()
@@ -149,6 +149,7 @@ public class HeroBehavior : MonoBehaviour
         if(jumpTimer > Time.time && onGround)
         {
             Jump();
+            //jumpSoundEffect.Play();  crashes game...?
         }
 
         ModifyPhysics();
