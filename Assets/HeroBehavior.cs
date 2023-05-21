@@ -272,6 +272,9 @@ public class HeroBehavior : MonoBehaviour
                                             respawnPoint.transform.position.y,
                                             transform.position.z);
        }
+       if (col.CompareTag("BossTrigger")){
+            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+       }
     }
 
 }
