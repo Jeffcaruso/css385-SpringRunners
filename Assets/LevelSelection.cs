@@ -16,7 +16,12 @@ public class LevelSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("1") == true)
+        if (Input.GetKeyDown("0"))
+        {
+            //level Tutorial (malachi)
+            SceneManager.LoadScene("malachi tutorial");
+        }
+        else if (Input.GetKeyDown("1"))
         {
             //tutorial (level 1)
             SceneManager.LoadScene("Tutorial-Scene");
@@ -41,14 +46,13 @@ public class LevelSelection : MonoBehaviour
             //level 5 (Joseph)
             SceneManager.LoadScene("Joseph-Scene");
         }
-        else if (Input.GetKeyDown("0"))
-        {
-            //level 5 (malachi)
-            SceneManager.LoadScene("malachi tutorial");
-        }
+        
         else if (Input.GetKeyDown("6")){
             SceneManager.LoadScene("Boss Level");
         }
+
+        //insert more levels here as needed...
+
         else
         {
             //do nothing
