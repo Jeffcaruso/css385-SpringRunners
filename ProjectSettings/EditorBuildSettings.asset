@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level Select Scene.unity
     guid: 3d5cdfc5d4da6144f88119b1874c2a08
   - enabled: 1
-    path: Assets/Scenes/Tutorial-Scene.unity
+    path: Assets/Scenes/retro scenes/Tutorial-Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Jeffrey-Scene.unity
@@ -18,19 +18,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Lawrence-Scene.unity
     guid: 46295f1339ab33e4a90404aef2bcb533
   - enabled: 1
-    path: Assets/Scenes/Joseph-Scene.unity
+    path: Assets/Scenes/retro scenes/Joseph-Scene.unity
     guid: 06912d81d85b11e4f814ee56a3a4c473
   - enabled: 1
     path: Assets/Scenes/Malachi-Scene.unity
     guid: babad9d6d99fb8d41a0be9deae0f55d0
   - enabled: 1
-    path: Assets/Scenes/(OLD)Jeffrey-Scene.unity
+    path: Assets/Scenes/retro scenes/(OLD)Jeffrey-Scene.unity
     guid: 6f731c0bfa740d94a9ca9f459b2dc04d
   - enabled: 1
     path: Assets/Scenes/malachi tutorial.unity
     guid: fff1155e99f8baa45baaba2eb4b01495
   - enabled: 1
-    path: Assets/Scenes/Level Template.unity
+    path: Assets/Scenes/retro scenes/Level Template.unity
     guid: 07d13894a70fdaa4999de3b850f54a04
   - enabled: 1
     path: Assets/Scenes/Boss Level.unity
