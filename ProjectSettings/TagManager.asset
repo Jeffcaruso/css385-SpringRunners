@@ -9,6 +9,8 @@ TagManager:
   - Piston
   - Void
   - BossTrigger
+  - Bullet
+  - Speedup
   layers:
   - Default
   - TransparentFX
