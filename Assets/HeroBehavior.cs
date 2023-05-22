@@ -236,7 +236,7 @@ public class HeroBehavior : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(Vector2.up * (jumpForce + runJump), ForceMode2D.Impulse);
        
-        Debug.Log("Testing jump values: " + (Vector2.up * (jumpForce + runJump)));
+        //Debug.Log("Testing jump values: " + (Vector2.up * (jumpForce + runJump)));
 
         //reset, so we won't keep doing jumps.
         jumpTimer = 0;
@@ -275,6 +275,14 @@ public class HeroBehavior : MonoBehaviour
        }
        if (col.CompareTag("BossTrigger")){
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+       }
+
+       if (col.CompareTag("Bullet")){
+            rb.velocity = new Vector2(0,0);
+       }
+
+       if (col.CompareTag("Speedup")){
+            GameObject.Find("Piston").GetComponent<PistonMovement>().pistonSpeed = 200f;
        }
     }
 

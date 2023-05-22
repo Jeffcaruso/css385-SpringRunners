@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathSequence : MonoBehaviour
 {
@@ -36,6 +37,9 @@ public class DeathSequence : MonoBehaviour
         bc.enabled = false;
         GameObject.Find("Piston").GetComponent<PistonMovement>().enabled = false;
         GameObject.Find("Main Camera").GetComponent<CameraShake>().CallShake();
-        rb.velocity = new Vector2(1500.0f, 500.0f);
+        if (SceneManager.GetActiveScene().name == "Boss Level"){//Ensure that the string matches the name for the boss level scene
+            this.transform.DetachChildren();
+        }
+        rb.velocity = new Vector2(2000.0f, 500.0f);
     }
 }

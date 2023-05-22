@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5404033189044837893}
   - component: {fileID: 2712471329887477881}
+  - component: {fileID: 6855018218643777662}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -84,3 +85,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6855018218643777662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3064305401906524601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34dc56e2f16fd4947ac89a01c56cc02c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7671872484786291263, guid: 82f68e8cb0ede814f9bbd2df46b28f8c, type: 3}
+  speed: 200
+  shootingForce: 400
+  bulletArcHeight: 5
+  minShootingInterval: 0.5
+  maxShootingInterval: 2
