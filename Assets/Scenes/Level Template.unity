@@ -1536,6 +1536,7 @@ MonoBehaviour:
   grappleDist: 3
   isGrappling: 0
   player: {fileID: 1172011567}
+  jumpSoundEffect: {fileID: 0}
 --- !u!50 &1172011573
 Rigidbody2D:
   serializedVersion: 4
@@ -1762,7 +1763,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 200
+  orthographic size: 300
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

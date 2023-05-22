@@ -573,7 +573,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 160
+  orthographic size: 300
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2141,6 +2141,7 @@ MonoBehaviour:
   grappleDist: 3
   isGrappling: 0
   player: {fileID: 1643988679}
+  jumpSoundEffect: {fileID: 0}
 --- !u!232 &1643988685
 DistanceJoint2D:
   m_ObjectHideFlags: 0
