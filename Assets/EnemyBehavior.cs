@@ -44,23 +44,24 @@ public class EnemyBehavior : MonoBehaviour
         {
             shouldShoot = true;
             shootingCoroutine = StartCoroutine(ShootAtRandomInterval());
-            Debug.Log("Start shooting");
+            //Debug.Log("Start shooting");
         }
         // Check if the enemy should stop shooting based on its position relative to the camera
         else if (shouldShoot && !IsEnemyVisibleOnScreen())
         {
             shouldShoot = false;
             StopCoroutine(shootingCoroutine);
-            Debug.Log("Stop shooting");
+            //Debug.Log("Stop shooting");
         }
     }
 
 
     private IEnumerator ShootAtRandomInterval()
     {
+        ShootBullet();
         while (true)
         {
-            Debug.Log("Coroutine is running.");
+            //Debug.Log("Coroutine is running.");
             yield return new WaitForSeconds(Random.Range(minShootingInterval, maxShootingInterval));
             ShootBullet();
         }

@@ -82,7 +82,9 @@ public class BossBehavior : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(minShootingInterval, maxShootingInterval));
-            ShootBullet();
+            int attackNum = Random.Range(1, 4);
+            Debug.Log(attackNum);
+            Attack(attackNum);
         }
     }
 
@@ -92,10 +94,111 @@ public class BossBehavior : MonoBehaviour
         StartCoroutine(MoveBulletInArc(bullet));
     }
 
+    private void Attack(int num){
+        if (num == 1){
+            GameObject bullet1 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet2 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet3 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet4 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet5 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Vector3 bullet1Target = new Vector3(target.transform.position.x, target.transform.position.y - 200, target.transform.position.z);
+            Vector3 bullet2Target = new Vector3(target.transform.position.x, target.transform.position.y - 100, target.transform.position.z);
+            Vector3 bullet4Target = new Vector3(target.transform.position.x, target.transform.position.y + 100, target.transform.position.z);
+            Vector3 bullet5Target = new Vector3(target.transform.position.x, target.transform.position.y + 200, target.transform.position.z);
+            StartCoroutine(MoveBulletInArc(bullet1, bullet1Target));
+            StartCoroutine(MoveBulletInArc(bullet2, bullet2Target));
+            StartCoroutine(MoveBulletInArc(bullet3));
+            StartCoroutine(MoveBulletInArc(bullet4, bullet4Target));
+            StartCoroutine(MoveBulletInArc(bullet5, bullet5Target));
+        } else if (num == 2){
+            GameObject bullet1 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet2 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet3 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet4 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet5 = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Vector3 bullet1Start = new Vector3(transform.position.x, transform.position.y - 150, transform.position.z);
+            Vector3 bullet2Start = new Vector3(transform.position.x, transform.position.y - 75, transform.position.z);
+            Vector3 bullet4Start = new Vector3(transform.position.x, transform.position.y + 75, transform.position.z);
+            Vector3 bullet5Start = new Vector3(transform.position.x, transform.position.y + 150, transform.position.z);
+
+            Vector3 bullet1Target = new Vector3(target.transform.position.x, target.transform.position.y - 150, target.transform.position.z);
+            Vector3 bullet2Target = new Vector3(target.transform.position.x, target.transform.position.y - 75, target.transform.position.z);
+            Vector3 bullet4Target = new Vector3(target.transform.position.x, target.transform.position.y + 75, target.transform.position.z);
+            Vector3 bullet5Target = new Vector3(target.transform.position.x, target.transform.position.y + 150, target.transform.position.z);
+            StartCoroutine(MoveBulletInArc(bullet1, bullet1Start, bullet1Target));
+            StartCoroutine(MoveBulletInArc(bullet2, bullet2Start, bullet2Target));
+            StartCoroutine(MoveBulletInArc(bullet3));
+            StartCoroutine(MoveBulletInArc(bullet4, bullet4Start, bullet4Target));
+            StartCoroutine(MoveBulletInArc(bullet5, bullet5Start, bullet5Target));
+        } else {
+            StartCoroutine(BurstAttack());
+        }
+    }
+
+    private IEnumerator BurstAttack(){
+        int count = 0;
+        int offset = 200;
+        while (count < 4){
+            yield return new WaitForSeconds(.15f);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Vector3 bulletTarget = new Vector3(target.transform.position.x, target.transform.position.y + offset, target.transform.position.z);
+            StartCoroutine(MoveBulletInArc(bullet, bulletTarget));
+            count++;
+            offset -= 100;
+        }
+        offset = 0;
+        while (count < 8){
+            yield return new WaitForSeconds(.15f);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Vector3 bulletTarget = new Vector3(target.transform.position.x, target.transform.position.y + offset, target.transform.position.z);
+            StartCoroutine(MoveBulletInArc(bullet, bulletTarget));
+            count++;
+            offset += 100;
+        }
+    }
+
     private IEnumerator MoveBulletInArc(GameObject bullet)
     {
         Vector3 startPosition = transform.position;
         Vector3 endPosition = target.transform.position;
+        Vector3 controlPoint = startPosition + (endPosition - startPosition) / 2 + Vector3.up * bulletArcHeight;
+
+        float t = 0;
+        float duration = Vector3.Distance(startPosition, endPosition) / shootingForce;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            bullet.transform.position = CalculateBezierPoint(t, startPosition, controlPoint, endPosition);
+            yield return null;
+        }
+
+        Destroy(bullet);
+    }
+
+    private IEnumerator MoveBulletInArc(GameObject bullet, Vector3 newEndPos)
+    {
+        Vector3 startPosition = transform.position;
+        Vector3 endPosition = newEndPos;
+        Vector3 controlPoint = startPosition + (endPosition - startPosition) / 2 + Vector3.up * bulletArcHeight;
+
+        float t = 0;
+        float duration = Vector3.Distance(startPosition, endPosition) / shootingForce;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime / duration;
+            bullet.transform.position = CalculateBezierPoint(t, startPosition, controlPoint, endPosition);
+            yield return null;
+        }
+
+        Destroy(bullet);
+    }
+
+    private IEnumerator MoveBulletInArc(GameObject bullet, Vector3 newStartPos, Vector3 newEndPos)
+    {
+        Vector3 startPosition = newStartPos;
+        Vector3 endPosition = newEndPos;
         Vector3 controlPoint = startPosition + (endPosition - startPosition) / 2 + Vector3.up * bulletArcHeight;
 
         float t = 0;
