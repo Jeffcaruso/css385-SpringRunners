@@ -52,6 +52,7 @@ public class HeroBehavior : MonoBehaviour
     Rigidbody playerRigidbody;
 
     public AudioSource jumpSoundEffect;
+    public AudioSource hurtSoundEffect;
 
     // Start is called before frame 0
     void Start()
@@ -266,12 +267,17 @@ public class HeroBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.CompareTag("Piston"))
+       {
+        hurtSoundEffect.Play();
+       }
        if(col.CompareTag("Void"))
        {
-           GameObject respawnPoint = col.gameObject.transform.parent.GetChild(0).gameObject;  //RespawnPoint Object must be in slot 0
-           transform.position = new Vector3(respawnPoint.transform.position.x,
-                                            respawnPoint.transform.position.y,
-                                            transform.position.z);
+            hurtSoundEffect.Play();
+            GameObject respawnPoint = col.gameObject.transform.parent.GetChild(0).gameObject;  //RespawnPoint Object must be in slot 0
+            transform.position = new Vector3(respawnPoint.transform.position.x,
+                                             respawnPoint.transform.position.y,
+                                             transform.position.z);
        }
        if (col.CompareTag("BossTrigger")){
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
@@ -280,6 +286,7 @@ public class HeroBehavior : MonoBehaviour
 
        if (col.CompareTag("Bullet")){
             rb.velocity = new Vector2(0,0);
+            hurtSoundEffect.Play();
        }
 
        if (col.CompareTag("Speedup")){

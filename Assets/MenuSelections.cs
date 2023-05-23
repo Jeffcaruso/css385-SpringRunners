@@ -18,6 +18,8 @@ public class MenuSelections : MonoBehaviour
 
     private GameObject player;
     private GameObject bossTrigger;
+    public AudioSource music;
+    public AudioSource winFanfare;
 
     void Start(){
         player = GameObject.Find("Hero square");
@@ -28,26 +30,33 @@ public class MenuSelections : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Boss Level"){
             if (win){
+                music.Stop();             //works
+                //winFanfare.Play();        //doesn't work because of time is paused? not sure
                 player.GetComponent<HeroBehavior>().enabled = false;
                 victoryScreen.SetActive(true);
-            } else if (!dead){
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    if (isPaused)
-                    {
-                        Resume();
-                    }
-                    else
-                    {
-                        Pause();
-                    }
+            } 
+            else if (!dead){
+                if (Input.GetKeyDown(KeyCode.Escape)){
+                  if (isPaused)
+                  {
+                      if (isPaused)
+                      {
+                          Resume();
+                      }
+                      else
+                      {
+                          Pause();
+                      }
                 }
-            } else if (checkpoint){
+            } 
+            else if (checkpoint){
                 checkpointDeathMenuUI.SetActive(true);
-            } else{
+            } 
+            else{
                 deathMenuUI.SetActive(true);
             }
-        } else {
+        } 
+        else {
             if (win){
                 player.GetComponent<HeroBehavior>().enabled = false;
                 victoryScreen.SetActive(true);
