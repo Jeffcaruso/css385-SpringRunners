@@ -165,7 +165,7 @@ public class MenuSelections : MonoBehaviour
         player = GameObject.Find("Hero square");
         bossTrigger = GameObject.Find("BossTrigger");
         player.transform.position = new Vector3(bossTrigger.transform.position.x, bossTrigger.transform.position.y, player.transform.position.z);
-        GameObject.Find("Piston").GetComponent<PistonMovement>().pistonSpeed = 100f;
+        GameObject.Find("Piston").GetComponent<PistonMovement>().pistonSpeed = 200f; //reminder, needs to be way too fast to work right in WebGL
         // Unsubscribe from the event
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
