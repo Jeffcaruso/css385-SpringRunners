@@ -143,18 +143,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 852160869298385018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efe72e38d5c7be6429143ca85d61823e, type: 3}
+  m_Script: {fileID: 11500000, guid: f509f7668015274468fca0bd3653f110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint1: {fileID: 0}
   waypoint2: {fileID: 0}
   target: {fileID: 0}
-  healthbar: {fileID: 0}
-  bulletPrefab: {fileID: 7671872484786291263, guid: 9bdd626eb69df484db4482178f948ef5, type: 3}
-  speed: 4
+  bulletPrefab: {fileID: 0}
+  speed: 10
   shootingForce: 10
-  bulletArcHeight: 7
+  bulletArcHeight: 5
   minShootingInterval: 0.5
   maxShootingInterval: 2
-  maxHealth: 100
-  currentHealth: 0

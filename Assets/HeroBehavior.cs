@@ -275,6 +275,7 @@ public class HeroBehavior : MonoBehaviour
        }
        if (col.CompareTag("BossTrigger")){
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            MenuSelections.checkpoint = true;
        }
 
        if (col.CompareTag("Bullet")){
