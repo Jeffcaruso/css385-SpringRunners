@@ -1,28 +1,31 @@
-# Beta build of final project game
+# Final Project game
 
 # [Website](https://jeffcaruso.github.io/css385-SpringRunners/)
 
 # [WebGL Build](https://jeffcaruso.github.io/css385-SpringRunners/JeffMasterBuild/)
 
 
-### Level 1 (Tutorial)
+### Tutorial Level
 - Introduce Piston
 - Introduce Basic Left/Right Movement
 - Introduce Jump
 - Introduce Spring Shoe Jump
 - Introduce grapple (swing)
 
-### Level 2 (Jeff level - multi level selection)
-- more info here...
+### Level 1
+- Multi-path approach with several partial path options, and locations to move between paths
+- Varying difficulties of path execution, from easy to moderate to relativelt hard but still doable for most early players.
 
-### Level 3 (Lawrence level)
-- more info here...
+### Level 2
+- Multiple partial path options
 
-### Level 4 (Malaki Level)
-- more info here...
+### Level 3
+- Multiple partial path options
 
-### Level 5 (Joseph Level)
-- more info here...
+### Boss Level
+- Projectile shots that reduce your speed to 0
+- Boss fight after the end
+- Requires a quite skilled player
 
 
 ## Produced By:
