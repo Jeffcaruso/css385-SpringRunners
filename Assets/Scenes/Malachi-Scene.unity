@@ -1309,6 +1309,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df5d4a1991a5e9f4cb9460c55efb6597, type: 3}
+--- !u!1001 &898287139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1330122985664751754, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_Name
+      value: Jump Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.037062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.268667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.662595
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+--- !u!82 &898287140 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4374909929517930242, guid: 1af9935908e595b46a13830a1c84c87b, type: 3}
+  m_PrefabInstance: {fileID: 898287139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &930387014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,7 +1837,7 @@ MonoBehaviour:
   grappleDist: 3
   isGrappling: 0
   player: {fileID: 1172011567}
-  jumpSoundEffect: {fileID: 0}
+  jumpSoundEffect: {fileID: 898287140}
 --- !u!50 &1172011573
 Rigidbody2D:
   serializedVersion: 4
