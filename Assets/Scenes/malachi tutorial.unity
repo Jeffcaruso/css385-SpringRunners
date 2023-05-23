@@ -1083,6 +1083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30e3b94575ccf744eb6c510f2b28e2ee, type: 3}
+--- !u!82 &354097224 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3248346349700962265, guid: 30e3b94575ccf744eb6c510f2b28e2ee, type: 3}
+  m_PrefabInstance: {fileID: 354097223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &450165900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4751790832678319564, guid: b2db7cbf3f80d9548b7c5c2a0ebdca1a, type: 3}
@@ -1996,6 +2001,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1192377163176121075, guid: c0096621ac2bcf54388d4c4215dfab80, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 354097224}
+    - target: {fileID: 1192377163176121075, guid: c0096621ac2bcf54388d4c4215dfab80, type: 3}
+      propertyPath: winFanfare
+      value: 
+      objectReference: {fileID: 1555102317}
     - target: {fileID: 1559148996374978493, guid: c0096621ac2bcf54388d4c4215dfab80, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3474,6 +3487,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534338340}
   m_CullTransparentMesh: 1
+--- !u!1001 &1555102316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1330122985664751754, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_Name
+      value: Win Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.037048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.268677
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.662595
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483935238422469895, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+--- !u!82 &1555102317 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4374909929517930242, guid: 2daf6cb8fc38a924dbb58fdca4f834d2, type: 3}
+  m_PrefabInstance: {fileID: 1555102316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1558651423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4175,7 +4250,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can use A to move left, but the Red Bar is Dangerous!
+  m_text: You can use A to move left, but the piston is Dangerous!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

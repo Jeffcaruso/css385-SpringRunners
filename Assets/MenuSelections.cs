@@ -14,10 +14,14 @@ public class MenuSelections : MonoBehaviour
     public GameObject victoryScreen;
     public GameObject quitScreen;
 
+    public AudioSource music;
+    public AudioSource winFanfare;
 
     void Update()
     {
         if (win){
+            music.Stop();             //works
+            //winFanfare.Play();        //doesn't work because of time is paused? not sure
             GameObject.Find("Hero square").GetComponent<HeroBehavior>().enabled = false;
             victoryScreen.SetActive(true);
         } else if (!dead){
