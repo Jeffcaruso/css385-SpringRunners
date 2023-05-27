@@ -54,10 +54,13 @@ public class HeroBehavior : MonoBehaviour
     public AudioSource jumpSoundEffect;
     public AudioSource hurtSoundEffect;
 
+    private Animator animcontr;
+
     // Start is called before frame 0
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animcontr = GetComponent<Animator>();
         playerRigidbody = player.GetComponent<Rigidbody>();
         finish = GameObject.Find("Safety FinishLine");
     }
@@ -68,17 +71,11 @@ public class HeroBehavior : MonoBehaviour
         ///Grapple stuff...
         Vector3 pos = transform.position;
         isGrappling = GetComponent<Grappler>().localGrapple;
-
         if(isGrappling)
         {
-            //don't do movement
-            //Debug.Log("grapple!");
             return;
+        } else {
         }
-
-        
-
-
 
 
         // end grapple stuff...
@@ -92,6 +89,12 @@ public class HeroBehavior : MonoBehaviour
             Physics2D.Raycast(transform.position + (colliderOffset /2), Vector2.down, groundLength, groundLayer) ||
             Physics2D.Raycast(transform.position - (colliderOffset /2), Vector2.down, groundLength, groundLayer) ||
             Physics2D.Raycast(transform.position, Vector2.down, groundLength, groundLayer);  //center
+
+            if (!onGround) {
+                animcontr.SetBool("isAirborne", true);
+            } else {
+                animcontr.SetBool("isAirborne", false);
+            }
 
         //reset jump force to default
         if (jumpTimer == 0)
@@ -160,7 +163,11 @@ public class HeroBehavior : MonoBehaviour
     {
         //this method is important, especially for functional horizontal movement!
         //Debug.Log("actually using Move method!");
-
+        if(horizontal == 0) {
+            animcontr.SetBool("isRunning", false);
+        } else {
+            animcontr.SetBool("isRunning", true);
+        }
 
         //horizontal movement
         rb.AddForce(Vector2.right * horizontal * moveSpeed);

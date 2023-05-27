@@ -13,6 +13,9 @@ public class Grappler : MonoBehaviour
     public float localGrappleDist;
     public bool withinRange = false;
 
+    
+    private Animator animcontr;
+
     //Movement variables
     Rigidbody2D rb;
     GameObject player;
@@ -21,6 +24,7 @@ public class Grappler : MonoBehaviour
     {
         _distanceJoint.enabled = false;
         localGrapple = GetComponent<HeroBehavior>().isGrappling;
+        animcontr = GetComponent<Animator>();
         rb = thePlayer.GetComponent<Rigidbody2D>();
         player = GameObject.Find("Hero square");
     }
@@ -71,6 +75,7 @@ public class Grappler : MonoBehaviour
             if (Input.GetKey(KeyCode.Space)){
                 Debug.Log(rb.velocity.magnitude);
                 localGrapple = true;
+                animcontr.SetBool("isGrapple", true);
                 _lineRenderer.SetPosition(0, grappleBlock.transform.position);
                 _lineRenderer.SetPosition(1, transform.position);
                 _distanceJoint.connectedAnchor = grappleBlock.transform.position;
@@ -89,7 +94,17 @@ public class Grappler : MonoBehaviour
                 _distanceJoint.enabled = false;
                 _lineRenderer.enabled = false;
                 localGrapple = false;
+                animcontr.SetBool("isGrapple", false);
                 player.GetComponent<HeroBehavior>().enabled = true;
+                Debug.Log(localGrapple);
+            }
+
+            if(localGrapple)
+            {
+                //don't do movement
+                Debug.Log("grapple!");
+                return;
+            } else {
             }
 
             if (_distanceJoint.enabled)

@@ -23,9 +23,12 @@ public class BossBehavior : MonoBehaviour
     private SpriteRenderer objectSpriteRenderer;
     private Color originalColor;
 
+    private Animator animcontr;
+
     void Start()
     {
         parentTransform = transform.parent;
+        animcontr = GetComponent<Animator>();
         objectSpriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = objectSpriteRenderer.color;
         //currentHealth = maxHealth;
@@ -69,8 +72,8 @@ public class BossBehavior : MonoBehaviour
 
     private void Drift()
     {
-        float xDrift = 0.8f * Mathf.Sin(0.7f * Time.time);
-        float yDrift = 0.25f * Mathf.Cos(0.7f * Time.time);
+        float xDrift = 24f * Mathf.Sin(0.7f * Time.time);
+        float yDrift = 24f * Mathf.Cos(0.7f * Time.time);
 
         Vector3 relativeDrift = new Vector3(xDrift, yDrift, 0);
         driftCenter = waypoint2.transform.position;
@@ -88,8 +91,11 @@ public class BossBehavior : MonoBehaviour
 
     private void ShootBullet()
     {
+        animcontr.SetTrigger("attack");
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         StartCoroutine(MoveBulletInArc(bullet));
+        
+
     }
 
     private IEnumerator MoveBulletInArc(GameObject bullet)

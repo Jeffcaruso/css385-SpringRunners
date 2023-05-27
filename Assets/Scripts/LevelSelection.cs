@@ -69,11 +69,11 @@ public class LevelSelection : MonoBehaviour
     }
     public void Level2Load()
     {
-        SceneManager.LoadScene("Lawrence-Scene");
+        SceneManager.LoadScene("Malachi-Scene");
     }
     public void Level3Load()
     {
-        SceneManager.LoadScene("Malachi-Scene");
+        SceneManager.LoadScene("Lawrence-Scene");
     }
     public void BossLevelLoad()
     {
