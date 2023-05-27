@@ -2,9 +2,7 @@
 
 # [Website](https://jeffcaruso.github.io/css385-SpringRunners/)
 
-# [WebGL Build](https://jeffcaruso.github.io/css385-SpringRunners/JeffMasterBuild/)
-
-# [Art Build (current best)](https://jeffcaruso.github.io/css385-SpringRunners/TestArtBuild/)
+# [WebGL Build](https://jeffcaruso.github.io/css385-SpringRunners/MainBuild/)
 
 ### Tutorial Level
 - Introduce Piston
