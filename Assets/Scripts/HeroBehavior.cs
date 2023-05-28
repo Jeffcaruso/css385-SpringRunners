@@ -288,6 +288,7 @@ public class HeroBehavior : MonoBehaviour
        }
        if (col.CompareTag("BossTrigger")){
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            MenuSelections.checkpoint = true;
        }
 
        if (col.CompareTag("Bullet")){
@@ -296,7 +297,7 @@ public class HeroBehavior : MonoBehaviour
        }
 
        if (col.CompareTag("Speedup")){
-            GameObject.Find("Piston").GetComponent<PistonMovement>().pistonSpeed = 200f;
+            GameObject.Find("Piston").GetComponent<PistonMovement>().pistonSpeed = 160f;
        }
     }
 

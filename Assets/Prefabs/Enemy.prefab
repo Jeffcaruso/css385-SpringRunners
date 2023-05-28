@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7671872484786291263, guid: 82f68e8cb0ede814f9bbd2df46b28f8c, type: 3}
   speed: 200
-  shootingForce: 400
+  shootingForce: 200
   bulletArcHeight: 5
-  minShootingInterval: 0.5
+  minShootingInterval: 1.75
   maxShootingInterval: 2
