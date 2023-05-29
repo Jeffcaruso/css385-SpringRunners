@@ -47,6 +47,6 @@ public class PistonMovement : MonoBehaviour
         float distanceFromCamera = Mathf.Abs(transform.position.z - mainCamera.transform.position.z);
         Vector3 leftViewportPoint = new Vector3(0f, 0.5f, distanceFromCamera);
         Vector3 leftWorldPoint = mainCamera.ViewportToWorldPoint(leftViewportPoint);
-        leftEdge = leftWorldPoint.x;
+        leftEdge = leftWorldPoint.x + 50;
     }
 }
