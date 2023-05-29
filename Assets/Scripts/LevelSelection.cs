@@ -65,11 +65,11 @@ public class LevelSelection : MonoBehaviour
     }
     public void Level1Load()
     {
-        SceneManager.LoadScene("Jeffrey-Scene");
+        SceneManager.LoadScene("Malachi-Scene");
     }
     public void Level2Load()
     {
-        SceneManager.LoadScene("Malachi-Scene");
+        SceneManager.LoadScene("Jeffrey-Scene");
     }
     public void Level3Load()
     {

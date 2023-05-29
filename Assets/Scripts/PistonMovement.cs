@@ -31,12 +31,12 @@ public class PistonMovement : MonoBehaviour
         {
             if (wall.transform.position.x > leftEdge - .001)
             {
-                wall.transform.position = new Vector3(wall.transform.position.x + (pistonSpeed / 500), wall.transform.position.y, 0);
+                wall.transform.position = new Vector3(wall.transform.position.x + (pistonSpeed / 500), wall.transform.position.y, wall.transform.position.z);
 
             }
             else
             {
-                wall.transform.position = new Vector3(leftEdge, wall.transform.position.y, 0);
+                wall.transform.position = new Vector3(leftEdge, wall.transform.position.y, wall.transform.position.z);
             }
         }
 

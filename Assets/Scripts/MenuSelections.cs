@@ -37,7 +37,7 @@ public class MenuSelections : MonoBehaviour
                 victoryScreen.SetActive(true);
                 checkpoint = false;
             } else if (!dead){
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
                 {
                     if (isPaused)
                     {
@@ -60,7 +60,7 @@ public class MenuSelections : MonoBehaviour
                 player.GetComponent<HeroBehavior>().enabled = false;
                 victoryScreen.SetActive(true);
             } else if (!dead){
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
                 {
                     if (isPaused)
                     {

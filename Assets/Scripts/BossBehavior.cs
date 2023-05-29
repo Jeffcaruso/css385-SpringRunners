@@ -24,6 +24,7 @@ public class BossBehavior : MonoBehaviour
     private Color originalColor;
 
     private Animator animcontr;
+    private Coroutine shootingCoroutine;
 
     void Start()
     {
@@ -40,6 +41,9 @@ public class BossBehavior : MonoBehaviour
         if (drifting)
         {
             Drift();
+        }
+        if (MenuSelections.win || MenuSelections.dead){
+            StopCoroutine(shootingCoroutine);
         }
     }
 
@@ -67,7 +71,7 @@ public class BossBehavior : MonoBehaviour
 
         drifting = true;
         driftCenter = waypoint2.transform.position;
-        StartCoroutine(ShootAtRandomInterval());
+        shootingCoroutine = StartCoroutine(ShootAtRandomInterval());
     }
 
     private void Drift()
