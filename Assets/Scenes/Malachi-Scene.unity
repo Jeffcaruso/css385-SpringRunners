@@ -2834,7 +2834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6503245619651101274, guid: 1be5081015da967429b91dfaf0f53165, type: 3}
       propertyPath: pistonSpeed
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6503245619651101276, guid: 1be5081015da967429b91dfaf0f53165, type: 3}
       propertyPath: m_RootOrder
