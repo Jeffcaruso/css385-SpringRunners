@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    height: 80vh;
+}
+
+img{
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    width: 48px;
+}
+
+#main-header{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 5vw;
+}
+
+#text{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    width: 80vw;
+    font-size: 1.5vw;
+    text-align: center;
+    color: rgb(39, 35, 35)
+}
