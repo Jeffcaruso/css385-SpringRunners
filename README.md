@@ -30,5 +30,5 @@ Unity Version 2021.3.21f1
 
 
 ## Produced By:
-### Team 10 (Jeffrey, Malachai, Lawrence, Joeseph)
+### Team 10 (Jeffrey, Malachi, Lawrence, Joseph)
 ### CSS 385 Spring 2023
