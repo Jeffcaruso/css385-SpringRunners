@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    margin-bottom: 5em;
+}
+
+h1{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    margin-top: 1em;
+}
+
+img{
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    width: 48px;
+}
+
+.doc{
+    width: 50em;
+    height: 80vh;
+}
+
+#reflection{
+    width: 50em;
+    height: 37em;
+}
+
+#references{
+    width: 50em;
+    height: 29em;
+}
+
+a{
+    padding: 2em;
+}
