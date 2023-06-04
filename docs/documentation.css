@@ -24,6 +24,11 @@ img{
     height: 80vh;
 }
 
+#timesheet{
+    width: 65em;
+    height: 45em;
+}
+
 #reflection{
     width: 50em;
     height: 37em;
